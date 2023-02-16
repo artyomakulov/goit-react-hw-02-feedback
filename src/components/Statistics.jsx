@@ -1,5 +1,5 @@
 import React from 'react'
-import css from './Counter.module.css'
+import css from './App.module.css'
 
 export default function Statistics({good, neutral, bad, total, positiveFeedBack}) {
     return (
