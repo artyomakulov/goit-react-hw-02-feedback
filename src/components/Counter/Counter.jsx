@@ -1,6 +1,6 @@
 import React from 'react';
 import Buttons from './Buttons';
-// import Value from './Value';
+import Value from './Value';
 
 class Counter extends React.Component {
     state = {
@@ -26,13 +26,11 @@ class Counter extends React.Component {
     }
 
     render () {
+        const {good, neutral, bad} = this.state
         return (  
             <div className="Counter">
             <Buttons increment={this.handelIncrement}/>
-            {/* <Value /> */}
-                <span className='btn_value'>good: {this.state.good}</span>
-                <span className='btn_value'>neutral: {this.state.neutral}</span>
-                <span className='btn_value'>bad: {this.state.bad}</span>
+            <Value good={good} neutral={neutral} bad={bad}/>
             </div>
         )
     }

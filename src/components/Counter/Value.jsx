@@ -1,14 +1,11 @@
 import React from 'react'
 
-const Value = () => {
+export default function Value({good, neutral, bad}) {
     return (
         <div className="Value">
-            <span className='btn_value'>good: {this.state.good}</span>
-            <span className='btn_value'>neutral: {this.state.neutral}</span>
-            <span className='btn_value'>bad: {this.state.bad}</span>
-        </div>
+        <span className='btn_value'>good: {good}</span>
+        <span className='btn_value'>neutral: {neutral}</span>
+        <span className='btn_value'>bad: {bad}</span>
+    </div>
     )
-    
 }
-
-export default Value
