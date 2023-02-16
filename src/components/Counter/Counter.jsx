@@ -1,7 +1,8 @@
 import React from 'react';
 import FeedbackOptions from './FeedbackOptions';
 import Statistics from './Statistics';
-import SectionTitle from './SectionTitle'
+import SectionTitle from './SectionTitle';
+import Notification from './Notification';
 import css from './Counter.module.css'
 
 class Counter extends React.Component {
@@ -47,7 +48,18 @@ class Counter extends React.Component {
             <div className={css.Counter}>
             <SectionTitle title={"Please leave feedback"}> 
             <FeedbackOptions increment={this.handelIncrement}/>
-            <Statistics good={good} neutral={neutral} bad={bad}  total={this.countTotalFeedback(this.state)} positiveFeedBack={this.countPositiveFeedbackPercentage(this.state)}/>
+            {good || neutral || bad ? (
+            <div>
+              <Statistics
+                good={good}
+                neutral={neutral}
+                bad={bad}
+                total={this.countTotalFeedback(this.state)}
+                positivePercentage={this.countPositiveFeedbackPercentage(this.state)}/>
+            </div>
+          ) : (
+            <Notification message={"There is no feedback"} />
+          )}
             </SectionTitle>
             </div>
         )
