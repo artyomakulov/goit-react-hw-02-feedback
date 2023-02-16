@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 export default function SectionTitle({title, children}) {
     return (
@@ -7,4 +9,8 @@ export default function SectionTitle({title, children}) {
         {children}
         </section>
     );
+}
+
+SectionTitle.propTypes = {
+    title: PropTypes.string.isRequired
 }

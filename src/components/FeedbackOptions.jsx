@@ -1,5 +1,7 @@
 import React from 'react';
-import css from './App.module.css'
+import PropTypes from 'prop-types';
+import css from './App.module.css';
+
 
 
 const FeedbackOptions = ({ increment }) => {
@@ -13,3 +15,7 @@ const FeedbackOptions = ({ increment }) => {
 }
 
 export default FeedbackOptions
+
+FeedbackOptions.propTypes = {
+    increment: PropTypes.func.isRequired,
+}
