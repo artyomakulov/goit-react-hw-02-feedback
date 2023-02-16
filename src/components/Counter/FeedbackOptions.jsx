@@ -2,7 +2,7 @@ import React from 'react';
 import css from './Counter.module.css'
 
 
-const Buttons = ({ increment }) => {
+const FeedbackOptions = ({ increment }) => {
     return (
             <div>
     <button type="button" className={css.btn} onClick={increment}>good</button>
@@ -12,4 +12,4 @@ const Buttons = ({ increment }) => {
     )
 }
 
-export default Buttons
+export default FeedbackOptions

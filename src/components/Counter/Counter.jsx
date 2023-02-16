@@ -1,7 +1,7 @@
 import React from 'react';
-import Buttons from './Buttons';
-import Value from './Value';
-import SectionTitle from './Title'
+import FeedbackOptions from './FeedbackOptions';
+import Statistics from './Statistics';
+import SectionTitle from './SectionTitle'
 import css from './Counter.module.css'
 
 class Counter extends React.Component {
@@ -45,10 +45,10 @@ class Counter extends React.Component {
         const {good, neutral, bad} = this.state
         return (  
             <div className={css.Counter}>
-            <SectionTitle title={"Please leave feedback"}/>
-            <Buttons increment={this.handelIncrement}/>
-            <SectionTitle title={"Statistics"}/>
-            <Value good={good} neutral={neutral} bad={bad}  total={this.countTotalFeedback(this.state)} positiveFeedBack={this.countPositiveFeedbackPercentage(this.state)}/>
+            <SectionTitle title={"Please leave feedback"}> 
+            <FeedbackOptions increment={this.handelIncrement}/>
+            <Statistics good={good} neutral={neutral} bad={bad}  total={this.countTotalFeedback(this.state)} positiveFeedBack={this.countPositiveFeedbackPercentage(this.state)}/>
+            </SectionTitle>
             </div>
         )
     }

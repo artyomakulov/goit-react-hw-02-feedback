@@ -1,9 +1,10 @@
 import React from 'react'
 import css from './Counter.module.css'
 
-export default function Value({good, neutral, bad, total, positiveFeedBack}) {
+export default function Statistics({good, neutral, bad, total, positiveFeedBack}) {
     return (
         <div className={css.value}>
+        <h2>Statistics</h2>
         <span className={css.btn_value}>good: {good}</span>
         <span className={css.btn_value}>neutral: {neutral}</span>
         <span className={css.btn_value}>bad: {bad}</span>
