@@ -36,7 +36,10 @@ class App extends React.Component {
     return (
       <div className={css.Counter}>
         <SectionTitle title={'Please leave feedback'}>
-          <FeedbackOptions increment={this.handelIncrement} />
+          <FeedbackOptions
+            increment={this.handelIncrement}
+            buttons={this.state}
+          />
           {good || neutral || bad ? (
             <div>
               <Statistics
