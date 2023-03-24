@@ -19,13 +19,6 @@ const FeedbackOptions = ({ increment, options }) => {
       })}
     </div>
   );
-  //     <div>
-  //       {options.map(({button}) => {
-  //         return <button key={button} type="button" className={css.btn} onClick={increment}>{button}</button>
-  //       })
-  //     </div>
-  //   );
-  // };
 };
 
 export default FeedbackOptions;

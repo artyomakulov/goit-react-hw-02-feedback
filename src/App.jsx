@@ -38,7 +38,7 @@ class App extends React.Component {
         <SectionTitle title={'Please leave feedback'}>
           <FeedbackOptions
             increment={this.handelIncrement}
-            options = {Object.keys(this.state)}
+            options={Object.keys(this.state)}
           />
           {good || neutral || bad ? (
             <div>
