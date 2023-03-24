@@ -2,18 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import css from './App.module.css';
 
-const FeedbackOptions = ({ increment, buttons }) => {
+const FeedbackOptions = ({ increment, options }) => {
   return (
     <div>
-      {Object.keys(buttons).map(button => {
+      {options.map(option => {
         return (
           <button
-            key={button}
+            key={option}
             type="button"
             className={css.btn}
             onClick={increment}
           >
-            {button}
+            {option}
           </button>
         );
       })}
@@ -32,4 +32,5 @@ export default FeedbackOptions;
 
 FeedbackOptions.propTypes = {
   increment: PropTypes.func.isRequired,
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
