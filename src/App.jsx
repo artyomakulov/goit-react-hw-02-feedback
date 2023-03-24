@@ -13,19 +13,10 @@ class App extends React.Component {
   };
 
   handelIncrement = event => {
-    if (event.target.textContent === 'good') {
-      this.setState(prevState => ({
-        good: prevState.good + 1,
-      }));
-    } else if (event.target.textContent === 'neutral') {
-      this.setState(prevState => ({
-        neutral: prevState.neutral + 1,
-      }));
-    } else {
-      this.setState(prevState => ({
-        bad: prevState.bad + 1,
-      }));
-    }
+    const key = event.target.textContent;
+    this.setState(prevState => ({
+      [key]: prevState[key] + 1,
+    }));
   };
 
   countTotalFeedback = ({ good, neutral, bad }) => {
